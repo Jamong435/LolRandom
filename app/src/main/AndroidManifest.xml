@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LolRandom">
-        <activity android:name=".introActivity">
+        <activity android:name=".MainActivity2"
+            android:theme="@style/Theme.Design.NoActionBar"></activity>
+        <activity android:name=".introActivity"
+            android:theme="@style/Theme.Design.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,13 +24,11 @@
             android:name="com.google.android.actions"
             android:resource="@xml/actions" />
 
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".MainActivity"
+            android:theme="@style/Theme.Design.NoActionBar"/>
+        <activity android:name=".SaveMemoActivity"/>
+        <activity android:name=".DetailActivity"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
     </application>
 
 </manifest>

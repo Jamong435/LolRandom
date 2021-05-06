@@ -1,13 +1,18 @@
 package com.example.lolrandom;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
 
@@ -30,13 +35,30 @@ public class MainActivity extends AppCompatActivity {
             R.drawable.a141, R.drawable.a142, R.drawable.a143, R.drawable.a144, R.drawable.a145,R.drawable.a146,R.drawable.a147,R.drawable.a148,R.drawable.a149,R.drawable.a150,
             R.drawable.a151, R.drawable.a152, R.drawable.a153, R.drawable.a154, R.drawable.a155    };
 
+    NavigationView navigationView;
     TextView tv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        navigationView = findViewById(R.id.nav);
         tv= findViewById(R.id.text);
+
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                int id = menuItem.getItemId();
+                switch (id){
+                    case R.id.menu_gallery:
+                        Intent intent=new Intent(MainActivity.this,MainActivity2.class);
+                        startActivity(intent);
+                        break;
+
+                }
+                return false;
+            }
+
+        });
 
     }
 
@@ -48,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
         Log.v("태그",""+imageId);
 
     }
+
 
 
 }
