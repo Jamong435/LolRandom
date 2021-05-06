@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.lolrandom">
+    package="com.lolgaja.lolrandom">
 
     <application
         android:allowBackup="true"
@@ -9,9 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LolRandom">
-        <activity android:name=".MainActivity2"
+        <activity android:name="com.lolgaja.lolrandom.MainActivity2"
             android:theme="@style/Theme.Design.NoActionBar"></activity>
-        <activity android:name=".introActivity"
+        <activity android:name="com.lolgaja.lolrandom.introActivity"
             android:theme="@style/Theme.Design.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,10 +24,10 @@
             android:name="com.google.android.actions"
             android:resource="@xml/actions" />
 
-        <activity android:name=".MainActivity"
+        <activity android:name="com.lolgaja.lolrandom.MainActivity"
             android:theme="@style/Theme.Design.NoActionBar"/>
-        <activity android:name=".SaveMemoActivity"/>
-        <activity android:name=".DetailActivity"/>
+        <activity android:name="com.lolgaja.lolrandom.SaveMemoActivity"/>
+        <activity android:name="com.lolgaja.lolrandom.DetailActivity"/>
 
     </application>
 
