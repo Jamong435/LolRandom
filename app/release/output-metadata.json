@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.example.lolrandom",
+  "applicationId": "com.lolgaja.lolrandom",
   "variantName": "processReleaseResources",
   "elements": [
     {
